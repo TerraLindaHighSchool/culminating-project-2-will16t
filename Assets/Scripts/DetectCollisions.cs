@@ -17,7 +17,7 @@ public class DetectCollisions : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        getComponent<MoveForward>().speed = 0;
+        other.PlayerController.speed = 0;
     }
 }
