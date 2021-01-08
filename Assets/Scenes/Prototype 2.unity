@@ -150,10 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fac1969f6d635341a4779360f03f528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalPrefabs:
-  - {fileID: 4738547126755073430, guid: 5bf9f9ecbb5003b42850607687a65241, type: 3}
-  - {fileID: 6491318371631818413, guid: ab39a465680b1d244ad5d37cebcf18e1, type: 3}
-  - {fileID: 6805032501455432590, guid: 958d46f822ed1014abea3693b33e2f96, type: 3}
+  carPrefabs:
+  - {fileID: 178130, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
 --- !u!4 &103251285
 Transform:
   m_ObjectHideFlags: 0
@@ -280,19 +278,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   speed: 10
---- !u!65 &323181383
-BoxCollider:
+--- !u!54 &323181383
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323181377}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1628075, y: 2.268413, z: 5.323662}
-  m_Center: {x: 0, y: 1.4060061, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &425805626
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +701,11 @@ PrefabInstance:
     - target: {fileID: 428284, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937596396223858774, guid: 09082afec7b5e824ca611a0cc3264bcd,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}

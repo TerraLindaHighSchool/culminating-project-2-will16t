@@ -17,7 +17,11 @@ public class DetectCollisions : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        getComponent<MoveForward>().speed = 0;
-        other.PlayerController.speed = 0;
+        if (other.GetComponent<PlayerController>() != null)
+        {
+            other.GetComponent<PlayerController>().speed = 0;
+            gameObject.GetComponent<MoveForward>().speed = 0;
+        }
+       
     }
 }
