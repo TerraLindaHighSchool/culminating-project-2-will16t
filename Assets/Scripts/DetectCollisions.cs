@@ -21,8 +21,9 @@ public class DetectCollisions : MonoBehaviour
         {
             other.GetComponent<PlayerController>().speed = 0;
             gameObject.GetComponent<MoveForward>().speed = 0;
+            gameManager.GameOver();
         }
-        // Two obstacle cars hit each other
+        
         else
         {
             Destroy(gameObject);
