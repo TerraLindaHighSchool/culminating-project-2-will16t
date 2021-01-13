@@ -5,17 +5,16 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int score;
+    public int score;
     public TextMeshProUGUI scoreText;
     void Start()
     {
         score = 0;
-        scoreText.text = "Score: " + score;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        scoreText.text = "Score: " + score;
     }
 }
