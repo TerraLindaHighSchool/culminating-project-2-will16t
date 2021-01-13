@@ -9,7 +9,7 @@ public class DetectCollisions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -24,8 +24,9 @@ public class DetectCollisions : MonoBehaviour
             other.GetComponent<PlayerController>().speed = 0;
             gameObject.GetComponent<MoveForward>().speed = 0;
             gameManager.GameOver();
+            Time.timeScale = 0;
         }
-        
+
         else
         {
             Destroy(gameObject);
