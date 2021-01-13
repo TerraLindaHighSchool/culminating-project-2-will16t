@@ -20,5 +20,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + score;
+        gameOverText.text = "Game Over! \n Your Score Was: " + score;
     }
 }

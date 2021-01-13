@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     private float spawnRangeX = 15;
     private float spawnPosZ = 20;
     private float startDelay = 2;
-    private float spawnInterval = 4.5f;
+    private float spawnInterval = 2.5f;
     private float spawnLastX;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnRandomCar()
     {
         float spawnX = Random.Range(-spawnRangeX, spawnRangeX);
-        if (Mathf.Abs(spawnX - spawnLastX) > 3.64f)
+        if (Mathf.Abs(spawnX - spawnLastX) > 3.64f) 
         {
             Vector3 spawnPos = new Vector3(spawnX, 0, spawnPosZ);
             int carIndex = Random.Range(0, carPrefabs.Length);
